@@ -4,25 +4,15 @@
 # Достаточно вернуть один допустимый вариант.
 # *Верните все возможные варианты комплектации рюкзака.
 
-# list_things = {'спальник': 2500, 'палатка': 8000, 'посуда': 3000, 'вещи': 6400, 'продукты': 7300, 'коврик': 600,
-#                'вода': 5600, 'фонарик': 240}
-#
-# MAX_LOAD_CAPACITY = 15000
-# picking = []
-#
-# for key, value in list_things.items():
-#     key += key
-#     if key <= MAX_LOAD_CAPACITY:
-#         picking.append(value)
-#
-# print(picking)
+import operator
 
-things = {'зажигалка': 20, 'компас': 100, 'фрукты': 500, 'рубашка': 300,
-          'термос': 1000, 'аптечка': 200, 'куртка': 600, 'бинокль': 400, 'удочка': 1200,
-          'салфетки': 40, 'бутерброды': 820, 'палатка': 5500, 'спальный мешок': 2250, 'жвачка': 10}
-ves = int(input()) * 1000
-sorted_things = dict(sorted(things.items(), key=lambda x: -x[1]))
-for k, v in sorted_things.items():
-    if v <= ves:
-        print(k, sep='/n')
-        ves -= v
+list_things = {'спальник': 2500, 'удочка': 1100, 'палатка': 8000, 'посуда': 3000, 'вещи': 6400, 'продукты': 7300,
+               'коврик': 600, 'компас': 200, 'вода': 5600, 'фонарик': 240, 'бинокль': 500}
+
+MAX_LOAD_CAPACITY = 15000
+picking = []
+sorted_things = dict(sorted(list_things.items(), key=operator.itemgetter(1)))
+for key, value in sorted_things.items():
+    if value <= MAX_LOAD_CAPACITY:
+        print(key, sep='/n')
+        MAX_LOAD_CAPACITY -= value
