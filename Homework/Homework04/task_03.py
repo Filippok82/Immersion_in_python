@@ -9,18 +9,38 @@
 При превышении суммы в 5 млн, вычитать налог на богатство 10% перед каждой операцией, даже ошибочной
 Любое действие выводит сумму денег"""
 
-
-initial_sum = 0
+MAX_SUM = 5000000
 SUM_WALLET = []
+ANSWER = str
 
 
+def user_interface():
+    select = input('Введите 1 внесения наличных, введите 2 для снятия наличных:')
+    if select == '1':
+        return initial_fun()
+    elif select == '2':
+        withdraw_money()
+    elif select == '3':
+        print("Спасибо, что воспользовались нашими услугами")
+        exit()
 
-def initial_fun(m: str, SUM_WALLET=None) -> list[int]:
-    wallet = []
-    wallet.append(m)
-    print(wallet)
-    SUM_WALLET = wallet+m
-    print(SUM_WALLET)
-money = (input("Введите сумму: "))
-print(initial_fun(money))
+def initial_fun(m):
+    if int(m) % 50 == 0:
+        SUM_WALLET.append(int(m))
+        print(f'На вашем счете:{sum(SUM_WALLET)}')
+        ANSWER = str(input(f"Хотите продолжить операцию да или нет "))
 
+        if ANSWER == "да":
+            m = 0
+            return initial_fun(m)
+        elif ANSWER == "нет":
+            initial_fun(m)
+
+
+def withdraw_money(n: int):
+    pass
+
+
+user_interface()
+money = (input("Введите сумму для пополнения 100, 150, 200, 250, 300:"))
+initial_fun(money)
