@@ -1,0 +1,8 @@
+To create a dictionary in Python, you need to pass a sequence of elements inside curly brackets {},
+ separating them with commas (,). Each element has a key and a value expressed by a pair of "key: value".
+The values can be any type of data and be repeated, but the keys must be unique.
+The following examples show how to create Python dictionaries:
+Creating an empty dictionary:
+
+dict_sample = {'Привет': 'мир'}Окончание файла
+Окончание файла
