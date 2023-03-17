@@ -4,13 +4,13 @@ import numpy as np
 
 
 def matrix_transposition01(mat: list) -> list:
-    result01 = np.transpose(matrix)
+    result01 = np.transpose(mat)
     return result01
 
 
 
 def matrix_transposition02(mat: list) -> list:
-    result02 = [list(i) for i in zip(*matrix)]
+    result02 = [list(i) for i in zip(*mat)]
     return result02
 
 

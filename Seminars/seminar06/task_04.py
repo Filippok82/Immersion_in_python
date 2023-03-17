@@ -6,10 +6,10 @@ from random import randint as rnd
 
 
 def my_function04(text: str, a: list, c: int) -> int:
-    print(riddle)
+    print(text)
     for i in range(c):
         anv = input("Введите ответ ")
-        if anv in answers:
+        if anv in a:
             return i + 1
     return 0
 

@@ -6,12 +6,13 @@
 
 from sys import argv
 from random import randint as rnd
+__all__ = ['my_function03']
 
 
-def my_function02(a: int = 0, b: int = 100, c: int = 5) -> bool:
+def my_function03(a: int = 0, b: int = 100, c: int = 5) -> bool:
     number = rnd(a, b)
     for i in range(c):
-        print(f"Введите число от {num1} до {num2} ")
+        print(f"Введите число от {a} до {b} ")
         num = int(input())
         if num > number:
             print("Число введенное больше")
@@ -25,4 +26,4 @@ def my_function02(a: int = 0, b: int = 100, c: int = 5) -> bool:
 if __name__ == '__main__':
     num, *params = argv
 
-    print(my_function02(*(int(n) for n in params)))
+    print(my_function03(*(int(n) for n in params)))

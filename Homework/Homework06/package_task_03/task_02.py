@@ -5,12 +5,13 @@
 Если число угадано, возвращается истина, а если попытки исчерпаны - ложь."""
 
 from random import randint as rnd
+__all__ = ['my_function02']
 
 
 def my_function02(a: int, b: int, c: int) -> bool:
     number = rnd(a, b)
     for i in range(c):
-        print(f"Введите число от {num1} до {num2} ")
+        print(f"Введите число от {a} до {b} ")
         num = int(input())
         if num > number:
             print("Число введенное больше")
