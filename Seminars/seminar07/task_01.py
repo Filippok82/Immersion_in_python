@@ -6,6 +6,8 @@
 
 import random as rnd
 
+
+__all__ = ['func01']
 MIN_LIMIT = -1000
 MAX_LIMIT = 1000
 

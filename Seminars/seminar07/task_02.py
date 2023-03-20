@@ -5,9 +5,11 @@
 
 import random as rnd
 
+__all__ = ['func02','glas_str', 'sogl_str']
 
 glas_str = "уеыаоэяию"
 sogl_str = "йцкнгшщзхфвпрлджчсмтб"
+
 
 def func02(cnt_line: int, file_name: str):
     with open(file_name, 'w', encoding='utf-8') as f:

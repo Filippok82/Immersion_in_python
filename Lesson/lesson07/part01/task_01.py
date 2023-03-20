@@ -70,3 +70,6 @@
 #     print(list(f1))
 #     print(list(f2))
 #     print(list(f3))
+f = open('bin_data', 'wb', buffering=64)
+f.write(b'X' * 1200)
+f.close()
