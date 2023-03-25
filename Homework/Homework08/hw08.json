@@ -1,0 +1,105 @@
+{
+  "C:\\Python\\PythonGB\\Homework\\Homework08": {
+    "dir01": {
+      "size": 8005,
+      "file_or_dir": "directory"
+    },
+    "dir02": {
+      "size": 8005,
+      "file_or_dir": "directory"
+    },
+    "dir03": {
+      "size": 8005,
+      "file_or_dir": "directory"
+    },
+    "__pycache__": {
+      "size": 8005,
+      "file_or_dir": "directory"
+    },
+    "file_json.json": {
+      "size": 140,
+      "file_or_dir": "file"
+    },
+    "hw08.csv": {
+      "size": 1652,
+      "file_or_dir": "file"
+    },
+    "hw08.json": {
+      "size": 2326,
+      "file_or_dir": "file"
+    },
+    "hw08.pickle": {
+      "size": 1063,
+      "file_or_dir": "file"
+    },
+    "ident.json": {
+      "size": 87,
+      "file_or_dir": "file"
+    },
+    "new_file.txt": {
+      "size": 97,
+      "file_or_dir": "file"
+    },
+    "task_01.py": {
+      "size": 2331,
+      "file_or_dir": "file"
+    },
+    "task_02.py": {
+      "size": 309,
+      "file_or_dir": "file"
+    }
+  },
+  "C:\\Python\\PythonGB\\Homework\\Homework08\\dir01": {
+    "dir04": {
+      "size": 0,
+      "file_or_dir": "directory"
+    }
+  },
+  "C:\\Python\\PythonGB\\Homework\\Homework08\\dir01\\dir04": {
+    "clbiycdtsoraoiuqhzowy.doc": {
+      "size": 2631,
+      "file_or_dir": "file"
+    },
+    "mwvetxxmhvsgurgkom.doc": {
+      "size": 948,
+      "file_or_dir": "file"
+    },
+    "oksktsphy.doc": {
+      "size": 4001,
+      "file_or_dir": "file"
+    },
+    "uxqtucyluyxmgxi.md": {
+      "size": 4071,
+      "file_or_dir": "file"
+    }
+  },
+  "C:\\Python\\PythonGB\\Homework\\Homework08\\dir02": {},
+  "C:\\Python\\PythonGB\\Homework\\Homework08\\dir03": {
+    "drawbfsjvtjqgbezpx.txt": {
+      "size": 1453,
+      "file_or_dir": "file"
+    },
+    "kmpsffoedfcgioutitsceh.doc": {
+      "size": 3448,
+      "file_or_dir": "file"
+    },
+    "luumwgek.txt": {
+      "size": 2362,
+      "file_or_dir": "file"
+    },
+    "qfuwyqmnmrttutjbwbvumfvfddonis.md": {
+      "size": 865,
+      "file_or_dir": "file"
+    },
+    "vxmpwifmplthzuditvzqntevwkwyuq.txt": {
+      "size": 576,
+      "file_or_dir": "file"
+    }
+  },
+  "C:\\Python\\PythonGB\\Homework\\Homework08\\__pycache__": {
+    "task_01.cpython-310.pyc": {
+      "size": 2347,
+      "file_or_dir": "file"
+    }
+  }
+}

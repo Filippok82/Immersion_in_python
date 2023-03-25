@@ -13,7 +13,7 @@ import os
 __all__ = ['group_renaming', 'count_num','desired_name', 'file_extension']
 
 
-def group_renaming(cn: int, dn: str, fe: str):
+def group_renaming(cn: int, dn: str, fe: str)-> None:
 
     count = f'{{0:0{cn}d}}'
     # print(count)
