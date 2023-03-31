@@ -7,6 +7,11 @@
 from sys import argv
 from random import randint as rnd
 
+__all__ = ['my_function02']
+
+num1 = 1
+num2 = 100
+
 
 def my_function02(a: int = 0, b: int = 100, c: int = 5) -> bool:
     number = rnd(a, b)
