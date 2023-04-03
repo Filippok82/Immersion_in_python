@@ -40,4 +40,4 @@ class Colleague(Human):
 
 
 id_p = Colleague("Pol", 25, 321654, 'pol@mail.ru', 100258789)
-print(id_p.level, id_p.acsess(), id_p.level)
+
