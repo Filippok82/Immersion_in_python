@@ -5,6 +5,8 @@
 
 
 class Archive():
+    """Класс Архив, который хранит пару свойств: число и строку.
+"""
     _one = None
 
     def __init__(self, num: int, val: str) -> None:
@@ -22,9 +24,11 @@ class Archive():
         return cls._one
 
     def __str__(self):
+        """Представление экземпляра для пользователя."""
         return f'Класс записывает число {self.num} и строку {self.val} в словарь'
 
     def __repr__(self):
+        """Представление экземпляра для прогаммиста."""
         return f'Archive({self.num}, "{self.val}")'
 
 
@@ -36,3 +40,5 @@ s = Archive(8952, 'Hi')
 print(s.numbers, s.values)
 s1 = Archive(4526, 'DOGS')
 print(f'{s1.num}, {s1.val}')
+print(f'Документация класса: {Archive.__doc__ = }')
+print(f'Документация экземпляра: {s.__new__.__doc__ = }')

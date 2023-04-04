@@ -7,12 +7,16 @@ import time
 
 class MyString(str):
     """Комментарий к классу"""
+
     def __new__(cls, value: str, author: str):
         """Комментарий к параметру"""
         instance = super().__new__(cls, value)
         instance.author = author
         instance.time = time.time()
         return instance
+
+    def __str__(self):
+        return f'Экземпляр класса с именем автора{self.author}'
 
 
 if __name__ == '__main__':
@@ -23,3 +27,5 @@ if __name__ == '__main__':
     # help(MyString)
     help(s)
 
+print(f'Документация класса: {MyString.__doc__ = }')
+print(f'Документация экземпляра: {s.__new__.__doc__ = }')

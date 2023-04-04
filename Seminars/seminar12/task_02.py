@@ -29,7 +29,7 @@ class Factorial:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        with open('file_factorial.json', 'w', encoding='utf-8') as f:
+        with open('../../Homework/Homework11/file_factorial.json', 'w', encoding='utf-8') as f:
             slovar = dict(zip(self.key_list, self.val_list))
             json.dump(slovar, f, ensure_ascii=False, indent=2)
 

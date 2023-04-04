@@ -24,15 +24,20 @@ class Archive():
             cls._one.values.append(cls._one.val)
         return cls._one
 
+    def __repr__(self):
+        return f'Archive {self.val}  {self.num}'
 
-s = Archive(123, '123355')
-print(s.numbers, s.values)
 
-s = Archive(5887, 'Hello')
-print(s.numbers, s.values)
+if __name__ == '__main__':
+    s = Archive(123, '123355')
+    print(s)
+    print(s.numbers, s.values)
 
-s = Archive(8952, 'Hi')
-print(s.numbers, s.values)
+    s = Archive(5887, 'Hello')
+    print(s.numbers, s.values)
 
-print(f'Документация класса: {Archive.__doc__ = }')
-print(f'Документация экземпляра: {s.__new__.__doc__ = }')
+    s = Archive(8952, 'Hi')
+    print(s.numbers, s.values)
+
+    print(f'Документация класса: {Archive.__doc__ = }')
+    print(f'Документация экземпляра: {s.__new__.__doc__ = }')
