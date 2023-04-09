@@ -9,100 +9,75 @@
 предмета и по оценкам всех предметов вместе взятых.
 """
 import csv
+import os.path
 
 
 class Journal:
     def __init__(self, name):
         self.name = name
-        self.file = str
+        self.file_name = None
         self.my_list = [[]]
 
+    @property
     def validate(self):
-        global file
-        for char in self.name:
-            if char.isalpha or char.istitle:
-                file = f'{self.name}.csv'
-            else:
-                print('Проверка имени не пройдена')
-            return file
+
+        if not self.name.isalpha():
+            print(f'Значение {self.name} должно содержать только буквы')
+
+        elif not self.name.istitle():
+            print(f'Значение {self.name} должно начинаться с заглавной буквы')
+
+        else:
+            file_name = f'{self.name}.csv'
+            return file_name
 
     def read_csv(self):
-        with open(file, 'r', encoding='utf-8') as r_csv:
-            self.my_list = list(csv.reader(r_csv))
-        return self.my_list
+        file = f'{self.name}.csv'
+        if os.path.exists(file):
+            with open(file, 'r', encoding='utf-8') as r_csv:
+                self.my_list = list(csv.reader(r_csv))
+            return self.my_list
+        else:
+            print(f'нет такого студента {file}')
 
 
-# class Student:
-#
-#     def __init__(self, name):
-#         self.name = name
-#         self.my_list = Journal.read_csv
-#
-#     def lesson(self):
-#         res = []
-#         for item in self.my_list:
-#             par_sum = 0
-#             print(item)
-# for ele in sub:
-#     ele = int(ele)
-#     t = [[int(v) if v.isnumeric() else v for v in x] for x in ele]
-#     res.append(ele)
-#
-#     print(res)
+class Student:
 
+    def __init__(self, name):
+        self.name = name
+        self.lessons = []
+        self.estimation = []
+        self.aver_estimation = int
+        self.marks = 0
+        self.aver_marks = int
 
-#             #     par_sum = par_sum + int(ele)
-#             # res.append(par_sum)
-#             # print(res)
+    def lesson(self):
+        with open(f'{self.name}.csv', 'r', encoding='utf-8') as r_csv:
+            self.lessons = list(csv.reader(r_csv))
 
-# les1, les2, les3 = my_list
-# print(les1)
-# for item in les1:
-#     print(item)
-#     self.marks.append(item[0])
-#     print(self.marks)
+        for item in self.lessons:
+            for i in item[1]:
+                if i.isnumeric():
+                    self.estimation.append(int(i))
+                    self.aver_estimation = sum(self.estimation) / len(self.estimation)
+        print(f'Средняя оценка студента {self.name} по всем предметам {self.aver_estimation} ')
 
-# l.append(re.findall(i))
-# print(l)
-
-# t = [[int(v) if v.isnumeric() else v for v in x] for x in my_list]
-#         self.les.append(i)
-# print(sum(self.les))
-#     self.les.append(elem)
-# return self.les
-# print(item[0])
-# for i in item[1]:
-#     lst = item.
-#     length = int(len(i))
-#     self.marks = sum(i)
-# return self.marks
-# sub1_avg = sum(n for _, n, _ in l) / float(len(l))
-#         sub2_avg = sum(n for  n in item) / float(len(item))
-# student_avgs = [{x[0]: sum(x[1:]) // float((len(x) - 1))} for x in l]
-#         print (sub2_avg)
-# self.les = [sum(int(i)) for i in my_list]
-# print(list(map(sum, my_list)))
-# for line in range(len(my_list)):
-#     self.les.append(l for l in line)
-#
-#     return self.les
-
-
-# def __add__(self, S):
-#     temp = Student(S.name, [])
-#     for i in range(len(self.marks)):
-#         temp.marks.append(self.marks[i] + S.marks[i])
-#     return temp
-
+        for line in self.lessons:
+            num = line[2].split(',')
+            self.marks = 0
+            for item in num:
+                temp = int(item)
+                self.marks += int(temp)
+            self.aver_marks = self.marks / len(num)
+            return f'Средний балл по тестам по предмету {line[0]}  -  {self.aver_marks}'
 
 
 if __name__ == '__main__':
-    # s = Student('Ivanov')
-    # s2 = Student('petro1')
     j = Journal('Ivanov')
-
-    # j1 = Journal('petov4')
-    # print(s.lesson())
-
-    print(j.validate())
+    s = Student('Ivanov')
+    print(j.validate)
     print(j.read_csv())
+    print(s.lesson())
+    # j1 = Journal('petrov123')
+    # print(j1.validate)
+    # print(j1.read_csv())
