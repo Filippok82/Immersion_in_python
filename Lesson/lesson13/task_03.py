@@ -32,4 +32,4 @@ class User:
             self.age = age
 
 
-user = User('Яковccccc', 12)
+user = User('Яковccccc', -12)
