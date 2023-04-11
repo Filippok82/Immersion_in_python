@@ -15,5 +15,5 @@ class Circle:
     def area_circle(self):
         return pi * self.radius ** 2
 
-my_circle = Circle(10)
+my_circle = Circle(22)
 print(my_circle.length_circle(),my_circle.area_circle())

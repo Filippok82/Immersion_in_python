@@ -23,5 +23,6 @@ def reed_json(file_name: str):
             users.add(User(name=name, id=int(id), level=int(level)))
     return users
 
+if __name__ == '__main__':
 
-print(reed_json('ident.json'))
+    print(reed_json('ident.json'))

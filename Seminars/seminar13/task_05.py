@@ -13,23 +13,23 @@
 """
 
 import json
-from task_03 import UserException,LevelError, AccessError
 
-
+from task_03 import LevelError, AccessError
 
 
 class User:
-    def __init__(self, name: str, id: int, level: int):
+    def __init__(self, name: str, user_id: int, level: int):
         self.name = name
-        self.id = id
+        self.user_id = id
         self.level = level
 
     def __eq__(self, other) -> bool:
-        return self.id == other.id and self.name == other.name
+        return self.user_id == other.user_id and self.name == other.name
 
 
 class Project:
     def __init__(self) -> None:
+        self.level = None
         self.users = set()
         self.user = None
 
@@ -39,21 +39,35 @@ class Project:
             data = json.load(f)
 
         for level, value in data.items():
-            for id, name in value.items():
-                self.users.add(User(name=name, id=int(id), level=int(level)))
+            for user_id, name in value.items():
+                self.users.add(User(name=name, user_id=int(user_id), level=int(level)))
         return self.users
 
-    # print(reed_json('ident.json'))
-    def enter(self, name: str, id: int):
-        u1 = User(name=name, id=id, level=0)
+    def enter(self, name: str, user_id: int):
+        u = User(name=name, user_id=user_id, level=0)
 
-        if u1 not in self.users:
+        if u not in self.users:
             raise AccessError
 
         for item in self.users:
-            if u1 == item:
+            if u == item:
                 self.user = item
                 return self.user
 
-    def add_user():
-        pass
+    def add_user(self, name, user_id, level):
+
+        u = User(name=name, user_id=user_id, level=level)
+
+        for item in self.users:
+            if u < item:
+                raise LevelError
+        else:
+            return self.users
+
+
+if __name__ == '__main__':
+    u1 = User('Fockus', 2, 0)
+    p1 = Project()
+    print(p1.reed_json('ident.json'))
+    # print(p1.enter('Miron', 2))
+    # print(p1.add_user())

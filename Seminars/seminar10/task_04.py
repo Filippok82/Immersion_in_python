@@ -38,6 +38,8 @@ class Colleague(Human):
             tmp += int(i)
         self.level = tmp % 7
 
+if __name__ == '__main__':
 
-id_p = Colleague("Pol", 25, 321654, 'pol@mail.ru', 100258789)
+    id_p = Colleague("Pol", 25, 321654, 'pol@mail.ru', 100258789)
+    print(id_p.acsess())
 

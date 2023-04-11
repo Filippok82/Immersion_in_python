@@ -16,7 +16,7 @@ def my_function04(text: str, a: list, c: int) -> int:
 
 if __name__ == '__main__':
     riddle = 'Какой орган спасает тушканчика от перегрева?'
-    answers = ['уши', 'нос', 'хвост', 'лапы']
+    answers = ['уши']
     count = int(5)
     print(my_function04(riddle, answers, count))
 
