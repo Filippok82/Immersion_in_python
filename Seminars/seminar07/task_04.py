@@ -34,5 +34,5 @@ def gen_file(ex: list, c: 42):
 
 
 expansion = ['txt', 'doc', 'md']
-count_file = 2
+count_file = 1
 gen_file(expansion, count_file)
