@@ -26,4 +26,4 @@ if __name__ == '__main__':
     num1 = int(input("Введите первое число:"))
     num2 = int(input("Введите второе число:"))
     chanse = int(input("Сколько попыток:"))
-    print(my_function02(num1, num1, chanse))
+    print(my_function02(num1, num2, chanse))
